@@ -14,8 +14,8 @@ Continuing our journey, we explore multipart upload utilizing multiprocessing—
 # Performance Comparison
 To provide a practical perspective on the efficiency gains, we conducted a comparative analysis of the three methods for uploading a substantial 1.2GB file. The results were as follows:
 
-put_object Method: Time Elapsed: 86s
-Multipart - Multithreading: Time Elapsed: 43s
-Multipart - Multiprocessing: Time Elapsed: 53s
+put_object Method: Time Elapsed: 86s \n
+Multipart - Multithreading: Time Elapsed: 43s \n
+Multipart - Multiprocessing: Time Elapsed: 53s \n
 
 It's evident that the put_object method exhibited the slowest performance due to its single HTTP request nature. While comparing the multithreading and multiprocessing approaches, it's important to recognize the significance of I/O-intensive operations. As anticipated, multithreading proved to be more efficient for this use case. Notably, the multiprocessing approach still delivered a considerable improvement over the basic put_object method.
